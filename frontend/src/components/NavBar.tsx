@@ -31,16 +31,16 @@ const NavBar: React.FC = () => {
     }, [isOpen]);
 
     return (
-        <header className="bg-transparent text-white px-4 md:px-8 py-4 shadow-md relative z-50">
+        <header className=" text-white bg-black h-fit md:px-8 py-4 shadow-md relative z-50">
             <div className="flex justify-between items-center">
                 {/* Logo */}
                 <div className="flex items-center gap-2">
                     <Image
                         src="/MainLOGO.svg"
                         alt="Logo"
-                        width={40}
-                        height={40}
-                        className="w-30 h-auto object-contain"
+                        width={80}
+                        height={50}
+                        className="object-contain"
                     />
                 </div>
 
@@ -50,7 +50,7 @@ const NavBar: React.FC = () => {
                         <Link
                             key={name}
                             href={href}
-                            className={`text-2xl font-semibold duration-300 hover:scale-110 ${activePage === name ? 'text-[#F38400]' : 'hover:text-[#F38400]'
+                            className={`text-lg font-semibold duration-300 hover:scale-110 ${activePage === name ? 'text-[#F38400]' : 'hover:text-[#F38400]'
                                 }`}
                             onClick={() => setActivePage(name)}
                         >
@@ -58,7 +58,7 @@ const NavBar: React.FC = () => {
                         </Link>
                     ))}
                 </nav>
-                <button className="bg-[#F38400] text-white px-4 py-2 rounded-xl text-lg hover:bg-[#732300] transition-all hidden md:block">
+                <button className="bg-[#F38400] text-white px-4 py-[5px] rounded-xl text-lg hover:bg-[#732300] transition-all hidden md:block">
                     Login
                 </button>
 
@@ -96,7 +96,7 @@ const NavBar: React.FC = () => {
                             </Link>
                         ))}
                         <button
-                            className="bg-[#F38400] text-white px-4 py-2 rounded-xl text-base hover:bg-[#732300] transition-all md:hidden"
+                            className="bg-[#F38400] text-white rounded-xl hover:bg-[#734500] transition-all md:hidden"
                             onClick={() => setIsOpen(false)}
                         >
                             Login
